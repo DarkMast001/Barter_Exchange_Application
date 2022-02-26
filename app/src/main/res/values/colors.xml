@@ -11,4 +11,5 @@
     <color name="dark_yellow">#FFCC6D</color>
     <color name="light_yellow">#FFD78D</color>
     <color name="transparent">#1A000000</color>
+    <color name="light_white">#717171</color>
 </resources>

@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -83,14 +84,11 @@ public class AuthenticationFragment extends Fragment {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.out.println("YES_1");
                 String email = emailEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
 
                 if(email.length() > 0 && password.length() > 0){
-                    System.out.println("YES_2");
                     registration(email, password, view);
-                    System.out.println("YES_3");
                 }
             }
         });
@@ -104,6 +102,7 @@ public class AuthenticationFragment extends Fragment {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(view.getContext(), "Регистрация прошла успешно!", Toast.LENGTH_SHORT).show();
+                    Navigation.findNavController(getView()).navigate(R.id.action_authenticationFragment_to_fragmentSwitcher);
                 }
                 else{
                     Toast.makeText(view.getContext(), "Регистрация провалена!", Toast.LENGTH_SHORT).show();
@@ -118,6 +117,7 @@ public class AuthenticationFragment extends Fragment {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
                     Toast.makeText(view.getContext(), "Авторизация прошла успешно!", Toast.LENGTH_SHORT).show();
+                    Navigation.findNavController(getView()).navigate(R.id.action_authenticationFragment_to_fragmentSwitcher);
                 }
                 else{
                     Toast.makeText(view.getContext(), "Авторизация провалена!", Toast.LENGTH_SHORT).show();
