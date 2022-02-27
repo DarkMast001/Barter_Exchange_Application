@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BarterExchange">
         <activity
+            android:name=".appMainFragments.AfterRegister"
+            android:exported="true" />
+        <activity
             android:name=".systemScripts.MainActivity"
             android:exported="true">
             <intent-filter>

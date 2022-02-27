@@ -55,28 +55,6 @@ public class fragmentSwitcher extends Fragment {
             }
         });
 
-        //bottomNavigationView.setOnNavigationItemSelectedListener(bottomNavMethod);
-
         return view;
     }
-
-    private BottomNavigationView.OnNavigationItemSelectedListener bottomNavMethod = new BottomNavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment fragment = null;
-            switch (item.getItemId()){
-                case R.id.list:
-                    fragment = new androidx.fragment.app.ListFragment();
-                    break;
-                case R.id.chat:
-                    fragment = new ChatFragment();
-                    break;
-                case R.id.profile:
-                    fragment = new ProfileFragment();
-                    break;
-            }
-            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
-            return true;
-        }
-    };
 }

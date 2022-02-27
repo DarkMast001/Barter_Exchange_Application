@@ -11,14 +11,16 @@
         <entry key="..\:/Samsung_Project/app/src/main/res/drawable/ic_user.xml" value="0.5574358974358974" />
         <entry key="..\:/Samsung_Project/app/src/main/res/drawable/item_selector.xml" value="0.5574358974358974" />
         <entry key="..\:/Samsung_Project/app/src/main/res/drawable/registration_button_style.xml" value="0.5574358974358974" />
+        <entry key="..\:/Samsung_Project/app/src/main/res/layout/activity_after_register.xml" value="0.328125" />
         <entry key="..\:/Samsung_Project/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/Samsung_Project/app/src/main/res/layout/after_registration_fragment.xml" value="0.33" />
         <entry key="..\:/Samsung_Project/app/src/main/res/layout/fragment_authentication.xml" value="0.5" />
         <entry key="..\:/Samsung_Project/app/src/main/res/layout/fragment_chat.xml" value="0.55" />
         <entry key="..\:/Samsung_Project/app/src/main/res/layout/fragment_list.xml" value="0.33" />
         <entry key="..\:/Samsung_Project/app/src/main/res/layout/fragment_profile.xml" value="0.5" />
-        <entry key="..\:/Samsung_Project/app/src/main/res/layout/fragment_registration.xml" value="0.55" />
+        <entry key="..\:/Samsung_Project/app/src/main/res/layout/fragment_registration.xml" value="0.5" />
         <entry key="..\:/Samsung_Project/app/src/main/res/layout/fragment_rows.xml" value="0.3848958333333333" />
+        <entry key="..\:/Samsung_Project/app/src/main/res/layout/fragment_switcher.xml" value="0.55" />
         <entry key="..\:/Samsung_Project/app/src/main/res/menu/bottom_navigation.xml" value="0.55" />
         <entry key="..\:/Samsung_Project/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.55" />
       </map>

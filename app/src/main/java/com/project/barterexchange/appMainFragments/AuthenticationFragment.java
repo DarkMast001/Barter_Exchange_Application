@@ -1,6 +1,7 @@
 package com.project.barterexchange.appMainFragments;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,6 +22,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.project.barterexchange.R;
+import com.project.barterexchange.systemScripts.MainActivity;
 
 import java.sql.SQLOutput;
 import java.util.concurrent.Executor;
@@ -48,6 +50,7 @@ public class AuthenticationFragment extends Fragment {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if(user != null){
                     // If the user exist...
+
                 }
                 else{
                     // Else...
@@ -69,6 +72,12 @@ public class AuthenticationFragment extends Fragment {
 
         mAuth = FirebaseAuth.getInstance();
 
+//        FirebaseUser user = mAuth.getCurrentUser();
+//        if(user != null){
+//            Intent intent = new Intent(view.getContext(), AfterRegister.class);
+//            startActivity(intent);
+//        }
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,12 +93,7 @@ public class AuthenticationFragment extends Fragment {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = emailEditText.getText().toString();
-                String password = passwordEditText.getText().toString();
-
-                if(email.length() > 0 && password.length() > 0){
-                    registration(email, password, view);
-                }
+                Navigation.findNavController(getView()).navigate(R.id.action_authenticationFragment_to_registrationFragment);
             }
         });
 

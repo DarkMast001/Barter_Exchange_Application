@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_authenticationFragment_to_fragmentSwitcher"
             app:destination="@id/fragmentSwitcher" />
+        <action
+            android:id="@+id/action_authenticationFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragmentSwitcher"
@@ -20,5 +23,14 @@
         <action
             android:id="@+id/action_fragmentSwitcher_to_authenticationFragment"
             app:destination="@id/authenticationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.project.barterexchange.appMainFragments.RegistrationFragment"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_fragmentSwitcher"
+            app:destination="@id/fragmentSwitcher" />
     </fragment>
 </navigation>
